@@ -14,7 +14,7 @@ For this project, you're going build a Single Page Application (SPA). Building t
 
 
 ## Functional Requirements 
-System should user to input into the journal (form)
+System should allow user to input into the journal (form)
 System should return an alert indicating whether the journal entry was stored successfully or not.
 If successful, system should return "success" alert together with a link that allows users to download their file
 System should allow users to generate random motivational quotes 
