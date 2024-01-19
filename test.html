@@ -102,8 +102,7 @@
             <div class="container-row container-row-journal">
               <div class="container-item container-item-journal">
                 <h1 class="journal-title-h1">A NEW ENTRY</h1>
-                <form id="entryForm" action="">
-                  <label for="entry-title" class="journal-label"
+                <form id="entryForm" action="" onsubmit="return validateForm()">                  <label for="entry-title" class="journal-label"
                     >Entry Title</label
                   >
                   <input
@@ -132,7 +131,21 @@
           </div>
         </section>
       </div>
-
+      <script>
+        function validateForm() {
+          var entryTitle = document.getElementById('entry-title').value;
+          var entryText = document.getElementById('entry').value;
+        
+          if (entryTitle.trim() === '' || entryText.trim() === '') {
+            alert('Please fill in all fields');
+            return false;
+          }
+        
+        
+        
+          return true; 
+        }
+        </script>
      
     <!-- Add this section after the existing content -->
     <div class="motiv-container">
@@ -155,16 +168,16 @@
 			</div> 
 			<div class="quote-box block__main block__back"> 
 				<span class="quote-main"> 
-					<i class="fas fa-2x fa-quote-left"></i> 
+					<!-- <i class="fas fa-2x fa-quote-left"></i> 
 					<span class="quote-text"> 
-						Quote To be Displayed Here 
+						Quote To be Displayed Here  -->
 					</span> 
 				</span> 
-				<div class="author-main"> 
-					Author to be Displayed Here 
+				<!-- <div class="author-main"> 
+					Author to be Displayed Here  -->
 				</div> 
-				<a class="new-quote-main btn btn-default "
-					onclick="newQuote()">New Quote</a> 
+				<!-- <a class="new-quote-main btn btn-default "
+					onclick="newQuote()">New Quote</a>  -->
 			</div> 
 		</div>
     </div>

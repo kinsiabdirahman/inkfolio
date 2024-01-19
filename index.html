@@ -62,7 +62,7 @@
         <li>
           <a href="#" target="_blank">
             <i class="fa fa-list" aria-hidden="true"></i>
-            <span class="links_name">Timeline</span>
+            <span class="links_name">Quotes</span>
           </a>
         </li>
         <li>
@@ -96,34 +96,52 @@
     </nav>
     <div class="home-content">
         <!-- Journal Entry Section -->
+<!-- Journal Entry Section -->
 <section class="section journal-section">
-    <div class="container journal-container">
-      <div class="container-row container-row-journal">
-        <div class="container-item container-item-journal">
-            <h1 class = "journal-title-h1">A NEW ENTRY</h1>
-          <form id="entryForm" action="">
-            <label for="entry-title" class="journal-label">Entry Title</label>
-            <input
-              type="text"
-              name="entry-title"
-              id="entry-title"
-              class="entry-text-title"
-              placeholder="Name of entry ✏️"
-            />
-            <label for="entry" class="journal-label">Today's Entry</label>
-            <textarea
-              name="daily-entry"
-              id="entry"
-              class="entry-text-box"
-              placeholder="What's on your mind today? 💭"
-            ></textarea>
-           
-            <button class="btn-main entry-submit-btn" type="submit">Submit</button>
-          </form>
-        </div>
+  <div class="container journal-container">
+    <div class="container-row container-row-journal">
+      <div class="container-item container-item-journal">
+          <h1 class="journal-title-h1">A NEW ENTRY</h1>
+        <form id="entryForm" action="" onsubmit="return validateForm()">
+          <label for="entry-title" class="journal-label">Entry Title</label>
+          <input
+            type="text"
+            name="entry-title"
+            id="entry-title"
+            class="entry-text-title"
+            placeholder="Name of entry ✏️"
+          />
+          <label for="entry" class="journal-label">Today's Entry</label>
+          <textarea
+            name="daily-entry"
+            id="entry"
+            class="entry-text-box"
+            placeholder="What's on your mind today? 💭"
+          ></textarea>
+         
+          <button class="btn-main entry-submit-btn" type="submit">Submit</button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+function validateForm() {
+  var entryTitle = document.getElementById('entry-title').value;
+  var entryText = document.getElementById('entry').value;
+
+  if (entryTitle.trim() === '' || entryText.trim() === '') {
+    alert('Please fill in all fields');
+    return false;
+  }
+
+
+
+  return true; 
+}
+</script>
+
   
         <div>
   </section>
