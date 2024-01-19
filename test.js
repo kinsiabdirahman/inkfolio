@@ -1,4 +1,3 @@
-
 // Reference to the entryForm in HTML
 const entryForm = document.getElementById("entryForm");
 
@@ -123,7 +122,7 @@ entryForm.addEventListener("submit", function (event) {
   return false; // Prevent form submission
 });
 
-
+//Quote generator API
 // Global Variable used to store the quotes
 // fetched from the API
 var data;
@@ -151,7 +150,6 @@ const textBack = texts[1];
 const buttonFront = button[0];
 const buttonBack = button[1];
 
-// An arrow function used to get a quote randomly
 const displayQuote = () => {
   // Generates a random number between 0
   // and the length of the dataset
@@ -160,16 +158,23 @@ const displayQuote = () => {
   // Stores the quote present at the randomly generated index
   let quote = data[index].text;
 
-  // Stores the author of the respective quote
-  let author = data[index].author;
+  // Stores the original author of the respective quote
+  let originalAuthor = data[index].author;
 
-  // Making the author anonymous if no author is present
-  if (!author) {
-    author = "Anonymous";
-  }
+  // Remove any unwanted text from the author
+  let cleanedAuthor = originalAuthor
+    ? originalAuthor.replace("type.fit", "").trim()
+    : null;
+
+  // Making the author anonymous if no cleaned author is present
+  let author = cleanedAuthor || "Anonymous";
+
+  console.log("Index:", index);
+  console.log("Original Author:", originalAuthor);
+  console.log("Cleaned Author:", cleanedAuthor);
+  console.log("Final Author:", author);
 
   // Replacing the current quote and the author with a new one
-
   if (front) {
     // Changing the front if the back-side is displayed
     textFront.innerHTML = quote;

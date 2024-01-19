@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -557,8 +556,6 @@ nav .profile-details i {
   text-decoration-color: #d2691e;
 } */
 
-
-
 .motiv-container {
   max-width: 1200px; /* Adjust the max-width as per your design */
   margin: 0 auto; /* Center the container */
@@ -580,7 +577,7 @@ nav .profile-details i {
   padding-left: 10px;
   transition: 0.5s;
   transition-timing-function: ease-in;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background-image: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
   color: transparent;
   -webkit-background-clip: text;
@@ -612,8 +609,8 @@ nav .profile-details i {
   font-size: 20px;
   transition: 0.5s;
   transition-timing-function: ease-in;
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-image: linear-gradient(to right bottom, #28313B, #485461);
+  font-family: "Open Sans Condensed", sans-serif;
+  background-image: linear-gradient(to right bottom, #28313b, #485461);
   color: transparent;
   -webkit-background-clip: text;
   transition: 0.5s;
@@ -633,7 +630,7 @@ nav .profile-details i {
   backface-visibility: hidden;
   box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
-  background-image: linear-gradient(to right bottom, #F6F0EA, #F1DFD1);
+  background-image: linear-gradient(to right bottom, #f6f0ea, #f1dfd1);
   transition: 0.5s;
 }
 
