@@ -1,14 +1,20 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <title>Inkfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="test.css" />
     <!-- Boxicons CDN Link -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		crossorigin="anonymous"/> 
     <!-- Icon Font Stylesheet -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
@@ -36,15 +42,12 @@
       href="https://kit.fontawesome.com/feeb5568d9.css"
       crossorigin="anonymous"
     />
-
     <script
       src="https://kit.fontawesome.com/feeb5568d9.js"
       crossorigin="anonymous"
     ></script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script src="https://unpkg.com/web3.storage/dist/bundle.js"></script> -->
-
   </head>
   <body>
     <div class="sidebar">
@@ -71,7 +74,6 @@
             <span class="links_name">Calendar</span>
           </a>
         </li>
-      
         <li>
           <a href="#" target="_blank">
             <i class="fa fa-picture-o" aria-hidden="true"></i>
@@ -84,7 +86,6 @@
             <span class="links_name">My Journal</span>
           </a>
         </li>
-       
       </ul>
     </div>
     <section class="home-section">
@@ -93,46 +94,80 @@
           <i class="bx bx-menu sidebarBtn"></i>
           <span class="dashboard">Home</span>
         </div>
-    </nav>
-    <div class="home-content">
+      </nav>
+      <div class="home-content">
         <!-- Journal Entry Section -->
-<section class="section journal-section">
-    <div class="container journal-container">
-      <div class="container-row container-row-journal">
-        <div class="container-item container-item-journal">
-            <h1 class = "journal-title-h1">A NEW ENTRY</h1>
-          <form id="entryForm" action="">
-            <label for="entry-title" class="journal-label">Entry Title</label>
-            <input
-              type="text"
-              name="entry-title"
-              id="entry-title"
-              class="entry-text-title"
-              placeholder="Name of entry ✏️"
-            />
-            <label for="entry" class="journal-label">Today's Entry</label>
-            <textarea
-              name="daily-entry"
-              id="entry"
-              class="entry-text-box"
-              placeholder="What's on your mind today? 💭"
-            ></textarea>
-           
-            <button class="btn-main entry-submit-btn" type="submit">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-        <div>
-  </section>
-  
-  
-    
-      
-    
+        <section class="section journal-section">
+          <div class="container journal-container">
+            <div class="container-row container-row-journal">
+              <div class="container-item container-item-journal">
+                <h1 class="journal-title-h1">A NEW ENTRY</h1>
+                <form id="entryForm" action="">
+                  <label for="entry-title" class="journal-label"
+                    >Entry Title</label
+                  >
+                  <input
+                    type="text"
+                    name="entry-title"
+                    id="entry-title"
+                    class="entry-text-title"
+                    placeholder="Name of entry ✏️"
+                  />
+                  <label for="entry" class="journal-label">Today's Entry</label>
+                  <textarea
+                    name="daily-entry"
+                    id="entry"
+                    class="entry-text-box"
+                    placeholder="What's on your mind today? 💭"
+                  ></textarea>
 
+                  <button class="btn-main entry-submit-btn" type="submit">
+                    Submit
+                  </button>
+                </form>
+                <!-- Display area for submitted entries -->
+                <div id="displayEntries"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+     
+    <!-- Add this section after the existing content -->
+<section class="sectionEntryResults" id="motivSection" style="display: none;">
+    <div class="motiv-container">
+    <section class="quote-section">
+		<div class="block text-center"> 
+			<div class="quote-box block__main block__front"> 
+				<span class="quote-main"> 
+					<i class="fas fa-2x fa-quote-left"></i> 
+					<span class="quote-text"> 
+						Quote To be Displayed Here 
+					</span> 
+				</span> 
+				<div class="author-main"> 
+					Author to be Displayed Here 
+				</div> 
+				<a class="new-quote-main btn btn-default"
+					onclick="newQuote()">New Quote</a> 
+			</div> 
+			<div class="quote-box block__main block__back"> 
+				<span class="quote-main"> 
+					<i class="fas fa-2x fa-quote-left"></i> 
+					<span class="quote-text"> 
+						Quote To be Displayed Here 
+					</span> 
+				</span> 
+				<div class="author-main"> 
+					Author to be Displayed Here 
+				</div> 
+				<a class="new-quote-main btn btn-default "
+					onclick="newQuote()">New Quote</a> 
+			</div> 
+		</div>
+    </div>
+	</section>
   
     <script>
       let sidebar = document.querySelector(".sidebar");
@@ -144,6 +179,6 @@
         } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
       };
     </script>
-        <script src="script.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>

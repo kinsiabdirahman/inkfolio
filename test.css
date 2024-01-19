@@ -558,93 +558,13 @@ nav .profile-details i {
 } */
 
 
-
-.motiv-container {
-  max-width: 1200px; /* Adjust the max-width as per your design */
-  margin: 0 auto; /* Center the container */
-  padding: 20px; /* Add padding for better spacing */
-}
+/* Add this CSS at the end of your existing styles */
 
 .sectionEntryResults {
   display: none;
+  padding: 20px;
 }
 
-.quote-section {
-  padding: 3rem;
-  transition: 0.5s;
-  transition-timing-function: ease-in;
-}
-
-.quote-main {
-  font-size: 30px;
-  padding-left: 10px;
-  transition: 0.5s;
-  transition-timing-function: ease-in;
-  font-family: 'Roboto', sans-serif;
-  background-image: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
-  color: transparent;
-  -webkit-background-clip: text;
-  transition: 0.5s;
-}
-
-.quote-box {
-  transition: 0.5s;
-  transition-timing-function: ease-in;
-}
-
-.new-quote-main {
-  font-size: 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  padding-bottom: 8px;
-  padding-top: 9px;
-  margin-top: 5px;
-  background-image: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
-  transition: 0.5s;
-}
-
-.new-quote-main:hover {
-  opacity: 0.6;
-}
-
-.author-main {
-  margin: 10px;
-  font-size: 20px;
-  transition: 0.5s;
-  transition-timing-function: ease-in;
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-image: linear-gradient(to right bottom, #28313B, #485461);
-  color: transparent;
-  -webkit-background-clip: text;
-  transition: 0.5s;
-}
-
-.block {
-  perspective: 150rem;
-  position: absolute;
-  top: 25%;
-  left: 27%;
-}
-
-.block__main {
-  min-width: 45vw;
-  position: absolute;
-  transition: all 0.8s ease;
-  backface-visibility: hidden;
-  box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
-  border-radius: 0.5rem;
-  background-image: linear-gradient(to right bottom, #F6F0EA, #F1DFD1);
-  transition: 0.5s;
-}
-
-.block__back {
-  transform: rotateY(180deg);
-}
-
-.rotateF {
-  transform: rotateY(-180deg);
-}
-
-.rotateB {
-  transform: rotateY(0deg);
+.sectionEntryResults.active {
+  display: block;
 }
