@@ -27,7 +27,7 @@ File.io API:
 Leveraging the File.io API for secure and seamless file storage. 
 
 Quotes API:
-Implementing the Type.fit Quotes API to infuse motivation into every visit. Explore how this feature enhances the user experience.
+Implementing the Type.fit Quotes API to infuse motivation into every visit. Exploring how this feature enhances the user experience.
 
 
 ## Project Setup
