@@ -381,7 +381,7 @@ nav .profile-details i {
 }
 
 .journal-label {
-  color:#0b1957;
+  color: #0b1957;
   font-size: 18px;
 }
 
@@ -402,7 +402,7 @@ nav .profile-details i {
   height: 100px;
   margin: 8px 0;
   padding: 10px;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 4px;
   background-color: #fafafa;
   box-sizing: border-box;
@@ -444,19 +444,23 @@ nav .profile-details i {
 }
 
 .quote-box.block__main {
-  min-width: 45vw;
   position: absolute;
-  margin-right: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45vw;
   transition: all 0.8s ease;
   backface-visibility: hidden;
   box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   background-image: linear-gradient(to right bottom, #f6f0ea, #f1dfd1);
   padding: 3rem;
+  z-index: 2; /* Set a higher z-index for the front quote box */
 }
 
 .quote-box.block__back {
   transform: rotateY(180deg);
+  z-index: 1; /* Set a lower z-index for the back quote box */
 }
 
 .quote-main {
@@ -465,9 +469,8 @@ nav .profile-details i {
   padding-left: 10px;
   transition: 0.5s;
   transition-timing-function: ease-in;
-  font-family: "Roboto", sans-serif;
   background-image: linear-gradient(to right bottom, #ed4264a8, #ffedbca8);
-  color: transparent;
+  color: #0b1957;
   -webkit-background-clip: text;
 }
 
