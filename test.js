@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
   timelineLink.addEventListener("click", function (event) {
     event.preventDefault();
 
-    // Toggle the visibility of the Motiv Section
+    // Toggle the visibility of the Motiv Section/quote section
     if (motivSection.style.display === "none") {
       motivSection.style.display = "block";
     } else {
