@@ -39,59 +39,61 @@ function uploadFile(file) {
       console.log("Journal entry stored:", data.link); // Log the link property
       // Show success notification
       showSuccessNotification(data.link);
-
-      // Save entry to the journalEntries array
-      const entry = {
-        title: document.getElementById("entry-title").value,
-        content: document.getElementById("entry").value,
-        fileIoLink: data.link,
-      };
-      journalEntries.push(entry);
-
-      // Save to db.json (client-side, for demonstration purposes only)
-      saveToDbJson(entry);
-    })
-    .catch((error) => {
-      console.error("Error storing journal entry:", error);
-      // Optionally, you can handle errors here
-      alert("Error storing journal entry. Please try again later.");
     });
+    
+
+    //   // Save entry to the journalEntries array
+    //   const entry = {
+    //     title: document.getElementById("entry-title").value,
+    //     content: document.getElementById("entry").value,
+    //     fileIoLink: data.link,
+    //   };
+    //   journalEntries.push(entry);
+
+    //   // Save to db.json (client-side, for demonstration purposes only)
+    //   saveToDbJson(entry);
+    // })
+    // .catch((error) => {
+    //   console.error("Error storing journal entry:", error);
+    //   // Optionally, you can handle errors here
+    //   alert("Error storing journal entry. Please try again later.");
+    // });
 }
 
 // Function to save entries to db.json (client-side, for demonstration purposes only)
-function saveToDbJson(entry) {
-  // Fetch current entries from db.json
-  fetch("http://localhost:3000/entries") // Replace with your server URL
-    .then((response) => response.json())
-    .then((data) => {
-      // Append new entry to the existing entries
-      data.entries.push(entry);
+// function saveToDbJson(entry) {
+//   // Fetch current entries from db.json
+//   fetch("http://localhost:3000/entries") // Replace with your server URL
+//     .then((response) => response.json())
+//     .then((data) => {
+//       // Append new entry to the existing entries
+//       data.entries.push(entry);
 
-      // Save updated entries back to db.json
-      fetch(dbJsonUrl, {
-        // Replace with your server URL
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => response.json())
-        .then((updatedData) => {
-          console.log("Entry saved to db.json:", updatedData);
-        })
-        .catch((error) => {
-          console.error("Error saving to db.json:", error);
-          // Optionally, you can handle errors here
-          alert("Error saving to db.json. Please try again later.");
-        });
-    })
-    .catch((error) => {
-      console.error("Error fetching data from db.json:", error);
-      // Optionally, you can handle errors here
-      alert("Error fetching data from db.json. Please try again later.");
-    });
-}
+//       // Save updated entries back to db.json
+//       fetch(dbJsonUrl, {
+//         // Replace with your server URL
+//         method: "PUT",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       })
+//         .then((response) => response.json())
+//         .then((updatedData) => {
+//           console.log("Entry saved to db.json:", updatedData);
+//         })
+//         .catch((error) => {
+//           console.error("Error saving to db.json:", error);
+//           // Optionally, you can handle errors here
+//           alert("Error saving to db.json. Please try again later.");
+//         });
+//     })
+//     .catch((error) => {
+//       console.error("Error fetching data from db.json:", error);
+//       // Optionally, you can handle errors here
+//       alert("Error fetching data from db.json. Please try again later.");
+//     });
+
 
 // Event listener for form submission
 entryForm.addEventListener("submit", function (event) {
