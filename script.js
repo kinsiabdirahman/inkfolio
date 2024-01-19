@@ -15,7 +15,7 @@ function createTextFile(entryTitle, todayEntry) {
   );
 }
 
-// Function to show a success notification
+// Function to show a success notification along with the link
 function showSuccessNotification(link) {
   alert(`Journal entry stored successfully!\nLink: ${link}`);
 }
