@@ -216,7 +216,7 @@ function newQuote() {
   // Displaying a new quote when the webpage loads
   displayRandomQuote();
 }
-
+   
 // ... (your existing script)
 
 document.addEventListener("DOMContentLoaded", function () {
