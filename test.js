@@ -139,7 +139,7 @@ const texts = document.querySelectorAll(".quote-text");
 // Getting the body
 const body = document.getElementById("body");
 
-// Getting the buttons
+// Getting the buttons to generate quotes
 const button = document.querySelectorAll(".new-quote");
 
 const blockFront = document.querySelector(".block__front");
@@ -260,7 +260,6 @@ document.addEventListener("DOMContentLoaded", function () {
       journalSection.style.display = "none";
     }
 
-    // Optionally, you can add logic to hide other sections if needed
 
     return false;
   });
