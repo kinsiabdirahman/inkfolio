@@ -125,7 +125,7 @@ entryForm.addEventListener("submit", function (event) {
 
 //Quote generator API
 // Global Variable used to store the quotes
-// fetched from the API
+// fetched from the API-quote generator
 var data;
 let front = true;
 
