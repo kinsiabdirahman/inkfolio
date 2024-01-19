@@ -371,19 +371,7 @@ nav .profile-details i {
     left: 220px;
   }
 }
-@media (max-width: 1150px) {
-  .home-content .sales-boxes {
-    flex-direction: column;
-  }
-  .home-content .sales-boxes .box {
-    width: 100%;
-    overflow-x: scroll;
-    margin-bottom: 30px;
-  }
-  .home-content .sales-boxes .top-sales {
-    margin: 0;
-  }
-}
+
 @media (max-width: 1000px) {
   .overview-boxes .box {
     width: calc(100% / 2 - 15px);
