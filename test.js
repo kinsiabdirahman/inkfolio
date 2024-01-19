@@ -23,12 +23,12 @@ function showSuccessNotification(link) {
 // Function to handle file upload
 function uploadFile(file) {
   const apiUrl = "https://file.io";
-  const dbJsonUrl = "http://localhost:3000/entries"; // Replace with your server URL
+//   const dbJsonUrl = "http://localhost:3000/entries"; 
 
   const formData = new FormData();
   formData.append("file", file);
 
-  // Perform a fetch to store the journal entry using file.io
+  // Performing a fetch to store the journal entry using file.io
   fetch(apiUrl, {
     method: "POST",
     body: formData,
@@ -40,7 +40,8 @@ function uploadFile(file) {
       // Show success notification
       showSuccessNotification(data.link);
     });
-    
+
+    //CODE BELOW COMMENTED OUT AS API IS NOW USED TO STORE THE DATA INSEAD OF DB.JSON
 
     //   // Save entry to the journalEntries array
     //   const entry = {
@@ -55,12 +56,12 @@ function uploadFile(file) {
     // })
     // .catch((error) => {
     //   console.error("Error storing journal entry:", error);
-    //   // Optionally, you can handle errors here
+    //   
     //   alert("Error storing journal entry. Please try again later.");
     // });
 }
 
-// Function to save entries to db.json (client-side, for demonstration purposes only)
+// Function to save entries to db.json 
 // function saveToDbJson(entry) {
 //   // Fetch current entries from db.json
 //   fetch("http://localhost:3000/entries") // Replace with your server URL
@@ -84,13 +85,13 @@ function uploadFile(file) {
 //         })
 //         .catch((error) => {
 //           console.error("Error saving to db.json:", error);
-//           // Optionally, you can handle errors here
+//    
 //           alert("Error saving to db.json. Please try again later.");
 //         });
 //     })
 //     .catch((error) => {
 //       console.error("Error fetching data from db.json:", error);
-//       // Optionally, you can handle errors here
+//
 //       alert("Error fetching data from db.json. Please try again later.");
 //     });
 
@@ -111,13 +112,11 @@ entryForm.addEventListener("submit", function (event) {
     // Upload the text file
     uploadFile(textFile);
 
-    // Process the rest of the form submission
-    // ...
-
+   
     // Clear the form fields after submitting
     entryForm.reset();
   } else {
-    // Optionally, you can add code here to handle empty fields
+    // handling empty fields
     console.error("Entry Title and Today's Entry cannot be empty.");
   }
 
@@ -226,9 +225,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let sidebar = document.querySelector(".sidebar");
   let sidebarBtn = document.querySelector(".sidebarBtn");
   let motivSection = document.getElementById("motivSection");
-  let timelineLink = document.querySelector(".nav-links li:nth-child(2) a"); // Assuming Timeline is the second link
-  let quoteSection = document.querySelector(".quote-section"); // Assuming you have a quote section
-  let journalSection = document.querySelector(".journal-section"); // Assuming you have a journal section
+  let timelineLink = document.querySelector(".nav-links li:nth-child(2) a"); // where Timeline is the second link
+  let quoteSection = document.querySelector(".quote-section"); //quote section
+  let journalSection = document.querySelector(".journal-section"); //  journal section
 
   sidebarBtn.onclick = function () {
     sidebar.classList.toggle("active");
@@ -239,11 +238,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Hide the quote, motiv, and journal sections when closing the sidebar
       quoteSection.style.display = "none";
       motivSection.style.display = "none";
-      journalSection.style.display = "none";
+    //   journalSection.style.display = "none";
     }
   };
 
-  // Add click event listener to the Timeline link
+  //  event listener for the Timeline link
   timelineLink.addEventListener("click", function (event) {
     event.preventDefault();
 
