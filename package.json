@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@web3-storage/w3up-client": "^12.1.0",
     "firebase": "^10.7.1"
   }
 }

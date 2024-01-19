@@ -1,4 +1,4 @@
-/* Googlefont Poppins CDN Link */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -437,3 +437,122 @@ nav .profile-details i {
     width: calc(100% - 60px);
   }
 }
+
+/* Journal Entry Section Styles */
+
+.journal-section {
+  background-color: #f1ddd6;
+  color: #8b4513;
+  width: 900px;
+  margin-left: 120px;
+  border-radius: 8px;
+  padding: 20px 0; /* Add space above and below */
+}
+
+.journal-container {
+  max-width: 700px;
+  height: 550px;
+  margin: 0 auto;
+
+  padding: 20px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-row-journal {
+  display: flex;
+  justify-content: center;
+}
+
+.entry-form {
+  width: 100%;
+}
+
+.journal-label {
+  color: #8b4513;
+}
+
+.entry-text-title {
+  width: 100%;
+
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #8b4513;
+  border-radius: 4px;
+  background-color: rgba(255, 218, 185, 0.5);
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+.entry-text-box {
+  width: 100%;
+  height: 100px;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #8b4513;
+  border-radius: 4px;
+  background-color: rgba(255, 218, 185, 0.5);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.entry-text-title:focus,
+.entry-text-box:focus {
+  outline-color: #d2691e;
+}
+
+.entry-text-title::placeholder,
+.entry-text-box::placeholder {
+  color: #d2691e;
+}
+
+.entry-submit-btn {
+  background-color: #d2691e;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 12px 30px;
+  box-shadow: none; /* Remove the shadow */
+}
+
+.entry-submit-btn:hover {
+  background-color: #8b4513;
+}
+
+/* Journal Results Section Styles
+
+.sectionEntryResults {
+  background-color: rgba(255, 218, 185, 0.3);
+  color: #8b4513;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.entryResultRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.single-entry-div {
+  max-width: 100%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.single-entry-date {
+  background-color: rgba(255, 218, 185, 0.5);
+  width: 100%;
+}
+
+.heading-results {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #d2691e;
+} */

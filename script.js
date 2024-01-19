@@ -1,29 +1,33 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  serverTimestamp,
-} from "firebase/firestore";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDzgSwpcrMFBqYD7jJBMJu6vqIUqoVlquo",
-  authDomain: "inkfolio-2665a.firebaseapp.com",
-  projectId: "inkfolio-2665a",
-  storageBucket: "inkfolio-2665a.appspot.com",
-  messagingSenderId: "472399981176",
-  appId: "1:472399981176:web:be33cef65ba3e566429b8d",
-  measurementId: "G-683X0VLWGP",
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// script.js
 
 // Reference to the entryForm in HTML
 const entryForm = document.getElementById("entryForm");
+
+// Function to handle file upload
+function uploadFile(file) {
+  const apiUrl = "https://file.io";
+
+  const formData = new FormData();
+  formData.append("file", file);
+
+  // Perform a fetch to store the journal entry using file.io
+  fetch("https://file.io", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("File.io API Response:", data); // Log the entire response
+      console.log("Journal entry stored:", data.link); // Log the link property
+      // Optionally, you can handle success here
+      alert("Journal entry stored successfully!");
+    })
+    .catch((error) => {
+      console.error("Error storing journal entry:", error);
+      // Optionally, you can handle errors here
+      alert("Error storing journal entry. Please try again later.");
+    });
+}
 
 // Event listener for form submission
 entryForm.addEventListener("submit", function (event) {
@@ -32,27 +36,18 @@ entryForm.addEventListener("submit", function (event) {
   // Get values from the form
   const entryTitle = document.getElementById("entry-title").value;
   const todayEntry = document.getElementById("entry").value;
+  const fileInput = document.getElementById("file-input");
+  const file = fileInput.files[0];
 
   // Check if both entryTitle and todayEntry are not empty
   if (entryTitle.trim() !== "" && todayEntry.trim() !== "") {
-    // Add a new document with a generated id
-    addDoc(collection(db, "entries"), {
-      entryTitle: entryTitle,
-      todayEntry: todayEntry,
-      timestamp: serverTimestamp(),
-    })
-      .then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        // Optionally, you can add code here to handle success
-        // For example, display a success message to the user
-        alert("Entry submitted successfully!");
-      })
-      .catch(function (error) {
-        console.error("Error adding document: ", error);
-        // Optionally, you can add code here to handle errors
-        // For example, display an error message to the user
-        alert("Error adding entry. Please try again later.");
-      });
+    // Upload file if selected
+    if (file) {
+      uploadFile(file);
+    }
+
+    // Process the rest of the form submission
+    // ...
 
     // Clear the form fields after submitting
     entryForm.reset();
