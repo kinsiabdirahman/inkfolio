@@ -217,7 +217,7 @@ function newQuote() {
   displayRandomQuote();
 }
    
-// ... (your existing script)
+// event listener to hide journal section
 
 document.addEventListener("DOMContentLoaded", function () {
   let sidebar = document.querySelector(".sidebar");
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Toggle the visibility of the Motiv Section/quote section
     if (motivSection.style.display === "none") {
       motivSection.style.display = "block";
-      journalSection.style.display = "none"; // Ensure the journal section is hidden
+      journalSection.style.display = "none"; // Ensuring the journal section is hidden
     } else {
       motivSection.style.display = "none";
     }
