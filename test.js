@@ -109,11 +109,11 @@ entryForm.addEventListener("submit", function (event) {
     // Create a text file with entry details
     const textFile = createTextFile(entryTitle, todayEntry);
 
-    // Upload the text file
+    // Uploading the text file
     uploadFile(textFile);
 
    
-    // Clear the form fields after submitting
+    // Clearing the form fields after submitting
     entryForm.reset();
   } else {
     // handling empty fields
