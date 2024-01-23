@@ -234,9 +234,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
       // Hide the quote, motiv, and journal sections when closing the sidebar
-      quoteSection.style.display = "none";
-      motivSection.style.display = "none";
-      journalSection.style.display = "none";
+      // quoteSection.style.display = "none";
+      // motivSection.style.display = "none";
+      // journalSection.style.display = "none";
     }
   };
 
